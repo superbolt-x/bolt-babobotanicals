@@ -1,1 +1,23 @@
 version: 2
+
+sources:
+
+- name: reporting
+  schema: reporting
+  tables:
+    - name: facebook_campaign_performance
+      identifier: babobotanicals_facebook_campaign_performance
+
+    - name: googleads_campaign_performance
+      identifier: babobotanicals_googleads_campaign_performance
+
+    - name: openaiads_campaign_performance
+      identifier: babobotanicals_openaiads_campaign_performance
+
+    - name: shopify_sales
+      identifier: babobotanicals_shopify_sales
+
+    # No ga4_campaign_performance model exists for this client; the package's
+    # by-campaign-session table already carries every column blended needs.
+    - name: ga4_campaign_performance
+      identifier: babobotanicals_ga4_performance_by_campaign_session
